@@ -29,7 +29,6 @@ def create_bookings(request):
 
     #save data
     serializer = BookingSerializer()
-    
     if serializer.is_valid():
         serializer.save()
     return Response({ "error": "No se realizo la reserva" }, status=status.HTTP_400_BAD_REQUEST)

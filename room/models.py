@@ -5,9 +5,9 @@ from django.db import models
 class Room(models.Model):
     rooms_id = ( ("A1", "A1"), ("A2", "A2"), ("B1", "B1"), ("B2", "B2") )
 
-    location_room = models.CharField(max_length=10, choices=rooms_id)
+    location_room = models.CharField(max_length=10, choices=rooms_id, unique=True)
     description = models.TextField()
-    price = models.FloatField()
+    price = models.FloatField(default=0)
     avaiable = models.BooleanField(default=True)
 
     def __str__(self):
