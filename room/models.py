@@ -5,7 +5,6 @@ from django.db import models
 class Room(models.Model):
     rooms_id = ( ("A1", "A1"), ("A2", "A2"), ("B1", "B1"), ("B2", "B2") )
 
-    image = models.ImageField()
     location_room = models.CharField(max_length=10, choices=rooms_id)
     description = models.TextField()
     avaiable = models.BooleanField(default=True)

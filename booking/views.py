@@ -9,7 +9,7 @@ from .serializers import BookingSerializer
 # Create your views here.
 @api_view(['GET'])
 def get_bookings(request):
-    if Booking.objects.all().exists()
+    if Booking.objects.all().exists():
         bookings = Booking.objects.all()
         serializer = BookingSerializer(bookings, many=True)
         return Response({ "bookings": serializer.data }, status=status.HTTP_200_OK)
