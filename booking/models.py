@@ -11,6 +11,7 @@ class Booking(models.Model):
 
     #billing details
 
+
     #details
     room_details = models.ForeignKey(Room, related_name="room", on_delete=models.CASCADE)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE)

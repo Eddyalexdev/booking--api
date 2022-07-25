@@ -7,6 +7,7 @@ class Room(models.Model):
 
     location_room = models.CharField(max_length=10, choices=rooms_id)
     description = models.TextField()
+    price = models.FloatField()
     avaiable = models.BooleanField(default=True)
 
     def __str__(self):
