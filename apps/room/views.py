@@ -8,7 +8,7 @@ from .serializers import RoomSerializer
 
 # Create your views here.
 @api_view(['GET'])
-def getRooms(request):
+def get_rooms(request):
     if Room.objects.all().exists():
         rooms = Room.objects.all()
         serializer = RoomSerializer(rooms, many=True)
